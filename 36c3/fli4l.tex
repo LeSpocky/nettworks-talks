@@ -96,16 +96,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\pgfdeclareimage[height=0.8\paperheight]{sdg}{sdg}
-%\pgfdeclareimage[width=\textwidth]{sdg}{sdg}
-%\pgfdeclareimage[width=0.18\textwidth]{fp2}{resources/fairphone/webshop_1428x1428_indigo.jpg}
-%\pgfdeclareimage[width=0.48\textwidth]{rockbox}{resources/rockbox/ipodnano2g-front.png}
-%\pgfdeclareimage[width=0.3\textwidth]{wdr4300}{resources/openwrt/img_4361.jpg}
-%\pgfdeclareimage[width=0.3\textwidth]{sonoff}{resources/sonoff/sonoffbasic.jpg}
-%\pgfdeclareimage[width=0.15\textwidth]{dff-logo}{resources/developers-for-future/developers-for-future-logo.png}
-%\pgfdeclareimage[width=0.1\textwidth]{bub-logo}{resources/bits_und_baeume/bits-und-baeume-logo.png}
-%\pgfdeclareimage[width=0.3\textwidth]{cfg-logo}{resources/code_for_germany/CFG_logo.png}
-%\pgfdeclareimage[width=0.3\textwidth]{gruenstreifen-logo}{resources/gruenstreifen/GRUENSTREIFEN_logo-1.png}
+\pgfdeclareimage[width=0.35\textwidth]{wdr4300}{img/img_4361.jpg}
+\pgfdeclareimage[width=0.35\textwidth]{di524}{img/D-Link_DI-524.jpg}
+\pgfdeclareimage[width=0.35\textwidth]{fb6490}{img/FRITZ!Box_6490_Cable.jpg}
+\pgfdeclareimage[width=0.35\textwidth]{wrt54g}{img/Linksys_BEFSR41_Router_20040321.jpg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% title, author, date
@@ -174,6 +168,21 @@
 
 \section{Was?}
 
+\begin{frame}{Router}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            \pgfuseimage{wdr4300}
+
+            \pgfuseimage{di524}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \pgfuseimage{fb6490}
+
+            \pgfuseimage{wrt54g}
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \begin{frame}{F(L)OSS -- Free/Libre and OpenSource Software}
     \begin{block}{Freie Software nach Definition von GNU, FSF, FSFE}
         \begin{description}
@@ -238,6 +247,32 @@
         vectorized by \href{http://www.home.unix-ag.org/simon/}{Simon Budig},
         converted to TikZ by
         \href{http://www.texample.net/weblog/2012/apr/28/tux-tex-tikz/}{Stefan Kottwitz}.
+    \end{block}
+    \begin{block}{Router}
+        \small
+        \begin{itemize}
+            \item Bild des Linksys Routers ist unter der
+                Creative-Commons-Lizenz
+                \href{https://creativecommons.org/licenses/by-sa/3.0/deed.de}{Namensnennung
+                – Weitergabe unter gleichen Bedingungen 3.0 nicht portiert}
+                lizenziert. Unverändert übernommen von
+                \href{https://commons.wikimedia.org/wiki/File:Linksys_BEFSR41_Router_20040321.jpg}{Wikimedia}.
+            \item Bild der Fritz!Box ist unter der Creative-Commons-Lizenz
+                \href{https://creativecommons.org/licenses/by-sa/3.0/deed.de}{Namensnennung
+                – Weitergabe unter gleichen Bedingungen 3.0 nicht portiert}
+                lizenziert. Urheber:
+                \href{https://commons.wikimedia.org/wiki/User:Wikifreund}{Wikifreund}.
+                Unverändert übernommen von
+                \href{https://commons.wikimedia.org/wiki/File:FRITZ!Box_6490_Cable.JPG}{Wikimedia}.
+            \item Bild des D-Link Routers ist unter der Creative-Commons-Lizenz
+                \href{https://creativecommons.org/licenses/by-sa/3.0/deed.de}{Namensnennung
+                – Weitergabe unter gleichen Bedingungen 3.0 nicht portiert}
+                lizenziert. Namensnennung:
+                \href{https://zh.wikipedia.org/wiki/User:Weihao.chiu}{Weihao.chiui}.
+                Unverändert übernommen von
+                \href{https://commons.wikimedia.org/wiki/File:D-Link_DI-524.jpg}{Wikimedia}.
+        \end{itemize}
+        \normalsize
     \end{block}
 \end{frame}
 
