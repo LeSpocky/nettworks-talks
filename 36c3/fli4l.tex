@@ -17,7 +17,7 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows,positioning}
 \usepackage{smartdiagram}
-\usepackage{todonotes}
+\usepackage[german]{todonotes}
 \presetkeys{todonotes}{inline}{}
 \usepackage{ulem}
 
@@ -125,7 +125,6 @@
 %    \tableofcontents
 %\end{frame}
 
-
 \section*{Wer?}
 
 \begin{frame}
@@ -179,6 +178,36 @@
             \pgfuseimage{fb6490}
 
             \pgfuseimage{wrt54g}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Router}
+    \framesubtitle{Was tut ein Router eigentlich?}
+    \begin{columns}
+        \begin{column}{0.65\textwidth}
+            \begin{itemize}
+                \item Weiterleitung von Netzwerkpaketen
+                \item Netzwerk-Schicht 3 (OSI)
+                \item verbindet verschiedene IP-Netze
+                \item bindet private Netze an öffentliche Netze an
+                \item filtert Pakete (Firewall)
+                \item Hardware integriert ggf. andere Funktionen
+                    \begin{itemize}
+                        \item Modem (DSL, Kabel, …)
+                        \item WLAN / WiFi
+                        \item Telefonie (VoIP, DECT, …)
+                    \end{itemize}
+                \item erfüllt z.T. einfache Serveraufgaben
+                    \begin{itemize}
+                        \item DNS / DHCP
+                        \item File-/Media-Server
+                    \end{itemize}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \missingfigure{Bild vom APU}
         \end{column}
     \end{columns}
 \end{frame}
