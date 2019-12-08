@@ -103,6 +103,7 @@
 \pgfdeclareimage[width=0.35\textwidth]{fb6490}{img/FRITZ!Box_6490_Cable.jpg}
 \pgfdeclareimage[width=0.35\textwidth]{wrt54g}{img/Linksys_BEFSR41_Router_20040321.jpg}
 \pgfdeclareimage[width=0.3\textwidth]{apu1}{img/img_4856.jpg}
+\pgfdeclareimage[height=0.75\paperheight]{dlarch}{img/Screenshot_20191208_170809.png}
 
 \titlegraphic{%
     \input{../img/fli4l-cubeonly-scale_0.15.tikz}
@@ -316,7 +317,7 @@ stellen.}
 \subsection{Überblick}
 
 \begin{frame}{fli4l}
-    \begin{columns}
+    \begin{columns}[T]
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item \strong{fl}oppy \strong{i}sdn \strong{for} \strong{l}inux
@@ -331,6 +332,7 @@ stellen.}
                         \item *DSL, UMTS/LTE, WLAN, …
                         \item IPv6, VPN, DMZ, VLAN, …
                         \item LCD, SBC, …
+                        \item min. i586 CPU, 64 MiB RAM
                     \end{itemize}
             \end{itemize}
         \end{column}
@@ -392,7 +394,17 @@ dokumentieren und als Open-Source-Projekt zur Verfügung stellen.
     }
 \end{frame}
 
-\subsection{Konfiguration}
+\subsection{Installation und Konfiguration}
+
+\begin{frame}{Entpacken der Archive}
+    \pgfuseimage{dlarch}
+\end{frame}
+
+\begin{frame}{Ordnerstruktur nach dem Auspacken}
+    \todo{Screenshot oder ähnliches}
+\end{frame}
+
+\subsection{Möglichkeiten und Einsatzszenarien}
 
 \subsection{Entwicklung}
 
