@@ -13,10 +13,11 @@
 
 \usepackage[ngerman]{babel}
 \usepackage[babel,english=american,german=guillemets]{csquotes}	% french
+%\usepackage{dirtree}
 \usepackage{microtype}
 \usepackage{tikz}
-\usetikzlibrary{arrows,positioning}
-\usepackage{smartdiagram}
+%\usetikzlibrary{arrows,positioning}
+%\usepackage{smartdiagram}
 \usepackage[german]{todonotes}
 \presetkeys{todonotes}{inline}{}
 %\usepackage{ulem}
@@ -104,6 +105,8 @@
 \pgfdeclareimage[width=0.35\textwidth]{wrt54g}{img/Linksys_BEFSR41_Router_20040321.jpg}
 \pgfdeclareimage[width=0.3\textwidth]{apu1}{img/img_4856.jpg}
 \pgfdeclareimage[height=0.75\paperheight]{dlarch}{img/Screenshot_20191208_170809.png}
+\pgfdeclareimage[width=\textwidth]{unpacked-tarball}{img/Screenshot_20191208_213440.png}
+\pgfdeclareimage[width=0.5\textwidth]{config-folder}{img/Screenshot_20191208_220336.png}
 
 \titlegraphic{%
     \input{../img/fli4l-cubeonly-scale_0.15.tikz}
@@ -396,12 +399,32 @@ dokumentieren und als Open-Source-Projekt zur Verfügung stellen.
 
 \subsection{Installation und Konfiguration}
 
-\begin{frame}{Entpacken der Archive}
+\begin{frame}{Laden und Entpacken der Archive}
     \pgfuseimage{dlarch}
 \end{frame}
 
 \begin{frame}{Ordnerstruktur nach dem Auspacken}
-    \todo{Screenshot oder ähnliches}
+    \begin{figure}
+        \pgfuseimage{unpacked-tarball}
+    \end{figure}
+
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Wichtige Dateien und Ordner}
+                \begin{itemize}
+                    \item \texttt{config}
+                    \item \texttt{doc}
+                    \item \texttt{mkfli4l.bat}
+                    \item \texttt{mkfli4l.sh}
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \pgfuseimage{config-folder}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \subsection{Möglichkeiten und Einsatzszenarien}
