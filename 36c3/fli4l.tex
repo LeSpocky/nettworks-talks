@@ -11,7 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 
-\usepackage[english]{babel}
+\usepackage[ngerman]{babel}
 \usepackage[babel,english=american,german=guillemets]{csquotes}	% french
 \usepackage{microtype}
 \usepackage{tikz}
@@ -75,6 +75,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% preparations for beamer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{caption}[caption name own line]
+
 \useinnertheme{default}
 \useoutertheme{infolines}
 %\usecolortheme[rgb={0.28,0.37,0.52}]{structure}
@@ -100,6 +102,7 @@
 \pgfdeclareimage[width=0.35\textwidth]{di524}{img/D-Link_DI-524.jpg}
 \pgfdeclareimage[width=0.35\textwidth]{fb6490}{img/FRITZ!Box_6490_Cable.jpg}
 \pgfdeclareimage[width=0.35\textwidth]{wrt54g}{img/Linksys_BEFSR41_Router_20040321.jpg}
+\pgfdeclareimage[width=0.3\textwidth]{apu1}{img/img_4856.jpg}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% title, author, date
@@ -189,7 +192,7 @@
 \begin{frame}
     \frametitle{Router}
     \framesubtitle{Was tut ein Router eigentlich?}
-    \begin{columns}
+    \begin{columns}[T]
         \begin{column}{0.65\textwidth}
             \begin{itemize}
                 \item Weiterleitung von Netzwerkpaketen
@@ -211,7 +214,10 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.35\textwidth}
-            \missingfigure{Bild vom APU}
+            \begin{figure}
+                \pgfuseimage{apu1}
+                \caption{PC Engines™ apu1}
+            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
