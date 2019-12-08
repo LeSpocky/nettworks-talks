@@ -104,6 +104,10 @@
 \pgfdeclareimage[width=0.35\textwidth]{wrt54g}{img/Linksys_BEFSR41_Router_20040321.jpg}
 \pgfdeclareimage[width=0.3\textwidth]{apu1}{img/img_4856.jpg}
 
+\titlegraphic{%
+    \input{../img/fli4l-cubeonly-scale_0.15.tikz}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% title, author, date
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,21 +316,30 @@ stellen.}
 \subsection{Überblick}
 
 \begin{frame}{fli4l}
-    \begin{itemize}
-        \item \strong{fl}oppy \strong{i}sdn \strong{for} \strong{l}inux
-        \item \strong{fl}exible \strong{i}nternet router \strong{for} \strong {l}inux
-        \item Linux-Distribution
-        \item im Jahr 2000 von Diskette für ISDN
-        \item einfache Konfiguration
-        \item ältere Hardware
-        \item heute
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
             \begin{itemize}
-                \item CF, SD, CD, HDD, …
-                \item *DSL, UMTS/LTE, WLAN, …
-                \item IPv6, VPN, DMZ, VLAN, …
-                \item LCD, SBC, …
+                \item \strong{fl}oppy \strong{i}sdn \strong{for} \strong{l}inux
+                \item \strong{fl}exible \strong{i}nternet router \strong{for} \strong {l}inux
+                \item Linux-Distribution
+                \item im Jahr 2000 von Diskette für ISDN
+                \item einfache Konfiguration
+                \item ältere Hardware
+                \item heute
+                    \begin{itemize}
+                        \item CF, SD, CD, HDD, …
+                        \item *DSL, UMTS/LTE, WLAN, …
+                        \item IPv6, VPN, DMZ, VLAN, …
+                        \item LCD, SBC, …
+                    \end{itemize}
             \end{itemize}
-    \end{itemize}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \input{../img/fli4l-cubeonly-scale_0.2.tikz}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \subsection{Geschichte}

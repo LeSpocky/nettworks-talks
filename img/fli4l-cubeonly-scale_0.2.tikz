@@ -1,0 +1,71 @@
+
+\definecolor{c00b700}{RGB}{0,183,0}
+\definecolor{c0000c2}{RGB}{0,0,194}
+\definecolor{cc90000}{RGB}{201,0,0}
+
+
+\begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-0.200000, xscale=0.200000, inner sep=0pt, outer sep=0pt]
+  \path[draw=black,line join=round,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (77.5584,251.3579) -- (508.8886,251.3579) --
+    (638.9895,120.1774) -- (207.1194,120.1774) -- (77.5584,251.3579) -- cycle;
+  \path[draw=black,line join=bevel,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (639.4676,546.3901) -- (639.0098,120.0758) --
+    (639.4676,546.3901) -- cycle;
+  \path[fill=c00b700,line join=miter,line cap=butt,even odd rule,line
+    width=0.050pt] (257.9600,481.2140) .. controls (423.1503,369.7676) and
+    (719.1464,498.5156) .. (670.7558,296.5896) .. controls (631.0026,225.6641) and
+    (633.6576,51.1434) .. (616.0522,51.1434) .. controls (591.5206,51.1434) and
+    (594.2188,206.1368) .. (584.0219,284.7131) .. controls (378.2838,322.6217) and
+    (305.7056,367.7282) .. (201.8169,447.3842) .. controls (299.4675,138.2372) and
+    (93.7294,490.9311) .. (111.4840,541.3159) .. controls (116.6725,572.3866) and
+    (214.1256,549.7978) .. (356.3004,552.5626) .. controls (353.4615,524.5997) and
+    (301.9268,498.2489) .. (257.9600,481.2140) -- cycle;
+  \path[draw=black,line join=round,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (74.4417,677.3797) -- (207.4793,546.1992) --
+    (639.4119,546.1992) -- (509.2485,677.3797) -- (74.4417,677.3797) -- cycle;
+  \path[draw=black,line join=bevel,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (74.3739,677.2175) -- (77.4878,251.1874) --
+    (74.3739,677.2175) -- cycle;
+  \path[fill=c0000c2,line join=miter,line cap=butt,even odd rule,line
+    width=0.050pt] (582.3980,319.4544) .. controls (524.2699,276.5349) and
+    (528.5850,251.2957) .. (538.1595,242.3855) .. controls (550.6932,230.7215) and
+    (596.7656,283.9033) .. (638.1476,291.1888) .. controls (672.3731,291.6857) and
+    (718.1152,279.9463) .. (749.4616,295.1988) .. controls (757.9679,332.9473) and
+    (645.9105,391.5696) .. (593.9551,438.6754) -- (558.9856,406.9961) .. controls
+    (146.7540,542.1665) and (47.5802,699.4359) .. (28.3984,701.4806) .. controls
+    (21.7305,702.1914) and (7.6104,705.1106) .. (3.5939,690.1209) .. controls
+    (-1.9641,669.3781) and (95.4319,596.6769) .. (204.9138,519.5387) .. controls
+    (310.9743,444.8110) and (421.5679,369.4624) .. (582.3980,319.4544) -- cycle;
+  \path[fill=cc90000,line join=miter,line cap=butt,even odd rule,line
+    width=0.050pt] (35.5469,688.1518) .. controls (19.4700,682.1446) and
+    (84.2713,547.0239) .. (113.7784,555.7116) .. controls (132.0661,561.0960) and
+    (116.8225,579.9443) .. (118.3220,606.0964) .. controls (203.4364,541.0760) and
+    (589.9514,362.8526) .. (601.6566,358.4909) .. controls (637.9112,344.9814) and
+    (650.7525,366.6812) .. (633.4325,392.3625) .. controls (589.9846,456.7848) and
+    (424.4056,528.4295) .. (283.7231,728.5432) .. controls (278.2364,736.5656) and
+    (256.2575,728.1579) .. (266.1268,713.6966) .. controls (288.1856,681.3739) and
+    (364.6070,578.0328) .. (441.1449,488.7717) .. controls (315.2251,530.1408) and
+    (237.6570,579.6532) .. (136.6765,632.7284) .. controls (151.4920,635.3077) and
+    (183.9336,632.8894) .. (177.4503,647.3804) .. controls (164.4270,676.4891) and
+    (71.6175,701.6295) .. (35.5469,688.1518) -- cycle;
+  \path[draw=black,line join=bevel,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (507.8767,673.3282) -- (507.4189,254.8552) --
+    (507.8767,673.3282) -- cycle;
+  \path[draw=black,line join=bevel,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (348.3886,677.3845) -- (273.8148,677.3858) --
+    (348.3886,677.3845) -- cycle;
+  \path[draw=black,line join=bevel,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (209.0578,546.1501) -- (208.6000,116.5984) --
+    (209.0578,546.1501) -- cycle;
+  \path[fill=c00b700,line join=miter,line cap=butt,even odd rule,line
+    width=0.050pt] (259.2324,482.2319) .. controls (424.4227,370.7855) and
+    (307.7415,366.2013) .. (203.8527,445.8573) .. controls (301.5034,136.7103) and
+    (93.7294,490.9311) .. (111.4840,541.3159) .. controls (116.6725,572.3866) and
+    (214.1256,549.7978) .. (356.3004,552.5626) .. controls (353.4615,524.5997) and
+    (303.1992,499.2668) .. (259.2324,482.2319) -- cycle;
+  \path[draw=black,line join=round,line cap=butt,miter limit=4.00,even odd
+    rule,line width=1.600pt] (207.1194,120.1774) -- (77.5584,251.3579) --
+    (508.8886,251.3579) -- (638.9895,120.1774);
+
+\end{tikzpicture}
+
