@@ -20,7 +20,13 @@
 %\usepackage{smartdiagram}
 \usepackage[german]{todonotes}
 \presetkeys{todonotes}{inline}{}
-%\usepackage{ulem}
+\usepackage[normalem]{ulem}
+
+\newcommand{\soutthick}[1]{%
+    \renewcommand{\ULthickness}{1pt}%
+        \sout{#1}%
+    \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
+}
 
 % colors for listings
 \definecolor{lightergray}{gray}{.95}
@@ -159,7 +165,7 @@
                 \end{itemize}
             \end{block}
         \end{column}
-        \pause
+        %\pause
         \begin{column}{0.3\textwidth}
             \begin{block}{Projekte}
                 \begin{itemize}
@@ -344,13 +350,15 @@ stellen.}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item \strong{fl}oppy \strong{i}sdn \strong{for} \strong{l}inux
-                \item \strong{fl}exible \strong{i}nternet router \strong{for} \strong {l}inux
-                \item Linux-Distribution
-                \item im Jahr 2000 von Diskette für ISDN
-                \item einfache Konfiguration
-                \item ältere Hardware
-                \item heute
+                \item \strong{fl}exible \strong{i}nternet router \strong{for}
+                    \strong {l}inux
+                \item<2-> Linux-Distribution
+                \item<2-> im Jahr 2000 von Diskette für ISDN
+                \item<2-> einfache Konfiguration
+                \item<2-> ältere Hardware
+                \item<3-> heute
                     \begin{itemize}
+                        \item \soutthick{Diskette}
                         \item CF, SD, CD, HDD, …
                         \item *DSL, UMTS/LTE, WLAN, …
                         \item IPv6, VPN, DMZ, VLAN, …
