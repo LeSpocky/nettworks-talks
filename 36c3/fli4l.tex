@@ -107,6 +107,7 @@
 \pgfdeclareimage[height=0.75\paperheight]{dlarch}{img/Screenshot_20191208_170809.png}
 \pgfdeclareimage[width=\textwidth]{unpacked-tarball}{img/Screenshot_20191208_213440.png}
 \pgfdeclareimage[width=0.5\textwidth]{config-folder}{img/Screenshot_20191208_220336.png}
+\pgfdeclareimage[width=0.5\textwidth]{win-build-build}{img/win_build_build.png}
 
 \titlegraphic{%
     \input{../img/fli4l-cubeonly-scale_0.15.tikz}
@@ -224,7 +225,7 @@
         \begin{column}{0.35\textwidth}
             \begin{figure}
                 \pgfuseimage{apu1}
-                \caption{PC Engines™ apu1}
+                \caption{apu1 von \href{https://pcengines.ch/apu.htm}{PC~Engines™}}
             \end{figure}
         \end{column}
     \end{columns}
@@ -454,6 +455,32 @@ COMP_TYPE_OPT='xz'       # compression algorithm if compression is
                          # NOTE that some boot types may disallow
                          # some compression algorithms
     \end{lstlisting}
+\end{frame}
+
+\begin{frame}{mkfli4l}
+    \begin{itemize}
+        \item Image oder Remote-Update
+    \end{itemize}
+    \begin{columns}[t,onlytextwidth]
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Linux}
+                \begin{itemize}
+                    \item \texttt{mkfli4l.sh}
+                    \item Variable \texttt{BOOT\_TYPE} aus \texttt{<config>/base.txt}
+                    \item Konfigurationsdatei \texttt{<config>/mkfli4l.txt}
+                    \item Parameter beim Aufruf
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Windows}
+                \begin{figure}
+                    \pgfuseimage{win-build-build}
+                    %\caption{fli4l-Build unter Windows}
+                \end{figure}
+            \end{block}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \subsection{Möglichkeiten und Einsatzszenarien}
