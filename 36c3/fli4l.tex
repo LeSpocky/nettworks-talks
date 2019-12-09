@@ -512,6 +512,32 @@ COMP_TYPE_OPT='xz'       # compression algorithm if compression is
 
 \subsection{Möglichkeiten und Einsatzszenarien}
 
+\begin{frame}[fragile]{Mehrere Subnetze}
+    \begin{itemize}
+        \item \href{https://web.nettworks.org/wiki/display/f/DMZ+mit+dem+fli4l}{Demilitarisierte Zone} (DMZ) (base)
+        \item iptables basierter Paketfilter (base)
+        \item IEEE 802.1Q tagged VLAN (advanced\_networking)
+    \end{itemize}
+    \pause
+    \begin{lstlisting}[%
+        basicstyle=\ttfamily\scriptsize\mdseries,
+        language=sh
+    ]
+IP_NET_1='172.23.48.1/22'
+IP_NET_1_DEV='br0'
+IP_NET_3='172.23.52.1/22'
+IP_NET_3_DEV='eth1.9'
+
+PF_FORWARD_4='if:IP_NET_1_DEV:any IP_NET_1 any ACCEPT'
+PF_FORWARD_12='IP_NET_3 IP_NET_1 REJECT'
+PF_FORWARD_17='if:IP_NET_3_DEV:any IP_NET_3 ACCEPT'
+    \end{lstlisting}
+%    \begin{figure}
+%        \input{img/dmz.tikz}
+%    \end{figure}
+    \todo{Grafik aus dem fli4l-Wiki}
+\end{frame}
+
 \begin{frame}[fragile,label=extarray]{Erweiterte Array-Syntax}
     \emph{\small klassisch:}
     \begin{lstlisting}[%
