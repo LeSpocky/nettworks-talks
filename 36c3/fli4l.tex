@@ -32,7 +32,7 @@
 \definecolor{darkerred}{rgb}{0.4,0,0}
 
 \usepackage{listings}
-% \lstloadlanguages{HTML,XML}
+\lstloadlanguages{bash,sh}
 \lstset{%
     basicstyle=\ttfamily\small\mdseries,
     keywordstyle=\bfseries\color{darkblue},
@@ -429,7 +429,67 @@ dokumentieren und als Open-Source-Projekt zur Verfügung stellen.
     \end{columns}
 \end{frame}
 
+\begin{frame}[fragile]{General Settings}
+    \begin{itemize}
+        \item Textdateien \texttt{*.txt} im Ordner \texttt{config}
+        \item einfaches Format mit Zuweisungen wie in
+            Shell-Skripten\footnote{erweitertes Format mit vereinfachter
+            Array-Syntax\\möglich, siehe Folie \ref{extarray}}
+        \item einfach mit Git o.\,ä, zu versionieren
+    \end{itemize}
+
+    \begin{lstlisting}[%
+        basicstyle=\ttfamily\scriptsize\mdseries,
+        language=sh
+    ]
+HOSTNAME='nixalsverdrus' # name of fli4l router
+PASSWORD='fli4l'         # password for root login (console, sshd,
+                         # imond)
+BOOT_TYPE='hd'           # boot device: hd, cd, ls120, integrated,
+                         # attached, netboot, pxeboot
+KERNEL_VERSION='4.19.80' # kernel version
+KERNEL_BOOT_OPTION=''    # append option to kernel command line
+COMP_TYPE_OPT='xz'       # compression algorithm if compression is
+                         # enabled for OPT archive;
+                         # NOTE that some boot types may disallow
+                         # some compression algorithms
+    \end{lstlisting}
+\end{frame}
+
 \subsection{Möglichkeiten und Einsatzszenarien}
+
+\begin{frame}[fragile,label=extarray]{Erweiterte Array-Syntax}
+    \emph{\small klassisch:}
+    \begin{lstlisting}[%
+        basicstyle=\ttfamily\scriptsize\mdseries,
+        language=sh
+    ]
+NET_PREFIX_N='2'
+NET_PREFIX_1_NAME='sg'
+NET_PREFIX_1_TYPE='static'
+NET_PREFIX_1_STATIC_IPV6='2001:db8:620a:3cd9::/64'
+NET_PREFIX_2_NAME='ula-clients'
+NET_PREFIX_2_TYPE='generated-ula'
+NET_PREFIX_2_ULA_DEV='eth1'
+    \end{lstlisting}
+    \pause
+    \emph{\small ab fli4l 4.0:}
+    \begin{lstlisting}[%
+        basicstyle=\ttfamily\scriptsize\mdseries,
+        language=sh
+    ]
+NET_PREFIX[] {
+  NAME='sg'
+  TYPE='static'
+  STATIC_IPV6='2001:db8:620a:3cd9::/64'
+}
+NET_PREFIX[] {
+  NAME='ula-clients'
+  TYPE='generated-ula'
+  ULA_DEV='eth1'
+}
+    \end{lstlisting}
+\end{frame}
 
 \subsection{Entwicklung}
 
