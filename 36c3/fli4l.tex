@@ -99,6 +99,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pgfdeclareimage[height=0.75\paperheight]{cisco7600}{img/Cisco7600seriesrouter.jpg}
 \pgfdeclareimage[width=0.35\textwidth]{wdr4300}{img/img_4361.jpg}
 \pgfdeclareimage[width=0.35\textwidth]{di524}{img/D-Link_DI-524.jpg}
 \pgfdeclareimage[width=0.35\textwidth]{fb6490}{img/FRITZ!Box_6490_Cable.jpg}
@@ -178,6 +179,14 @@
 \section{Router}
 
 \begin{frame}{Router}
+    \begin{figure}
+        \pgfuseimage{cisco7600}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Router}
+    \framesubtitle{Plasterouter}
     \begin{columns}[T]
         \begin{column}{0.15\textwidth}
             ~
@@ -258,6 +267,16 @@ Anschluss von Telekommunikationsendeinrichtungen und die Nutzung der
 Telekommunikationsdienste haben sie dem Teilnehmer in Textform
 unaufgefordert und kostenfrei bei Vertragsschluss zur Verfügung zu
 stellen.}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Routerfreiheit}
+    \framesubtitle{Hold my Beer …}
+    \begin{itemize}
+        \item \href{http://extern.fli4l.de/fli4l_praxis_gallery/main.php}{fli4l Praxis-Galerie}
+    \end{itemize}
+
+    \todo{Bilder aus der Galerie in die Folien}
 \end{frame}
 
 \begin{frame}{Router-Software}
@@ -562,16 +581,15 @@ NET_PREFIX[] {
 %\appendix
 
 \begin{frame}{Lizenzen}
-    \begin{block}{The Linux Mascot}
-        Penguin Tux by \href{mailto:lewing@isc.tamu.edu}{Larry Ewing}
-        and \href{http://isc.tamu.edu/~lewing/linux/}{The GIMP},
-        vectorized by \href{http://www.home.unix-ag.org/simon/}{Simon Budig},
-        converted to TikZ by
-        \href{http://www.texample.net/weblog/2012/apr/28/tux-tex-tikz/}{Stefan Kottwitz}.
-    \end{block}
     \begin{block}{Router}
         \small
         \begin{itemize}
+            \item Bild des Cisco Routers ist unter der Creative-Commons-Lizenz
+                \href{https://creativecommons.org/licenses/by-sa/3.0/deed.de}{Namensnennung
+                – Weitergabe unter gleichen Bedingungen 3.0 nicht portiert}
+                lizenziert. Urheber: Cisco Systems Inc. Unverändert übernommen
+                von
+                \href{https://commons.wikimedia.org/wiki/File:Cisco7600seriesrouter.jpg}{Wikimedia}.
             \item Bild des Linksys Routers ist unter der
                 Creative-Commons-Lizenz
                 \href{https://creativecommons.org/licenses/by-sa/3.0/deed.de}{Namensnennung
@@ -594,6 +612,16 @@ NET_PREFIX[] {
                 \href{https://commons.wikimedia.org/wiki/File:D-Link_DI-524.jpg}{Wikimedia}.
         \end{itemize}
         \normalsize
+    \end{block}
+\end{frame}
+
+\begin{frame}{Lizenzen}
+    \begin{block}{The Linux Mascot}
+        Penguin Tux by \href{mailto:lewing@isc.tamu.edu}{Larry Ewing}
+        and \href{http://isc.tamu.edu/~lewing/linux/}{The GIMP},
+        vectorized by \href{http://www.home.unix-ag.org/simon/}{Simon Budig},
+        converted to TikZ by
+        \href{http://www.texample.net/weblog/2012/apr/28/tux-tex-tikz/}{Stefan Kottwitz}.
     \end{block}
 \end{frame}
 
