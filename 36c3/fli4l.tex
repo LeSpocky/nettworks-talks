@@ -37,7 +37,7 @@
 \definecolor{darkergreen}{rgb}{0,0.4,0}
 \definecolor{darkerred}{rgb}{0.4,0,0}
 
-\usepackage{listings}
+\usepackage[]{listings}
 \lstloadlanguages{bash,sh}
 \lstset{%
     basicstyle=\ttfamily\small\mdseries,
@@ -49,6 +49,7 @@
     showstringspaces=false,
     tabsize=4,
     backgroundcolor=\color{lightergray},
+    extendedchars=false,
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -115,6 +116,7 @@
 \pgfdeclareimage[width=\textwidth]{unpacked-tarball}{img/Screenshot_20191208_213440.png}
 \pgfdeclareimage[width=0.5\textwidth]{config-folder}{img/Screenshot_20191208_220336.png}
 \pgfdeclareimage[width=0.5\textwidth]{win-build-build}{img/win_build_build.png}
+\pgfdeclareimage[height=0.75\paperheight]{dmz}{img/dmz.png}
 
 \titlegraphic{%
 %    \input{../img/fli4l-cubeonly-scale_0.15.tikz}
@@ -510,31 +512,52 @@ COMP_TYPE_OPT='xz'       # compression algorithm if compression is
 
 \subsection{Möglichkeiten und Einsatzszenarien}
 
+\begin{frame}{Circuits}
+    \todo{Doku und Wiki nach verständlichen Illustrationen abgrasen}
+\end{frame}
+
+\begin{frame}{Mehrere Subnetze}
+    \begin{columns}[T]
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \pgfuseimage{dmz}
+                %\caption{Quelle: fli4l-Wiki (\href{https://web.nettworks.org/wiki/x/LAAdAQ}{DMZ mit dem fli4l})}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            Quelle: fli4l-Wiki (\href{https://web.nettworks.org/wiki/x/LAAdAQ}{DMZ mit dem fli4l})
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \begin{frame}[fragile]{Mehrere Subnetze}
+    \framesubtitle{Demilitarisierte Zone (DMZ)}
     \begin{itemize}
-        \item \href{https://web.nettworks.org/wiki/display/f/DMZ+mit+dem+fli4l}{Demilitarisierte Zone} (DMZ) (base)
+        \item aka mehrere Subnetze mit bestimmten Firewall-Regeln
         \item iptables basierter Paketfilter (base)
-        \item IEEE 802.1Q tagged VLAN (advanced\_networking)
+        \item Bridges, IEEE 802.1Q tagged VLAN, … (advanced\_networking)
     \end{itemize}
     \pause
     \begin{lstlisting}[%
         basicstyle=\ttfamily\scriptsize\mdseries,
         language=sh
     ]
-IP_NET_1='172.23.48.1/22'
-IP_NET_1_DEV='br0'
-IP_NET_3='172.23.52.1/22'
-IP_NET_3_DEV='eth1.9'
+VLAN_DEV_1_DEV='eth2'
+VLAN_DEV_1_VID='128'
+BRIDGE_DEV_1_DEVNAME='br0'
+BRIDGE_DEV_1_DEV_1_DEV='eth1'
+BRIDGE_DEV_1_DEV_2_DEV='eth2.128'
 
-PF_FORWARD_4='if:IP_NET_1_DEV:any IP_NET_1 any ACCEPT'
-PF_FORWARD_12='IP_NET_3 IP_NET_1 REJECT'
-PF_FORWARD_17='if:IP_NET_3_DEV:any IP_NET_3 ACCEPT'
+IP_NET_1='192.168.6.1/24'   # internes Netz (LAN)
+IP_NET_1_DEV='br0'          # (gruen)
+IP_NET_2='192.168.7.1/24'   # DMZ Netz
+IP_NET_2_DEV='eth1.9'       # (orange)
+
+PF_FORWARD_1='tmpl:samba DROP'
+PF_FORWARD_2='if:IP_NET_1_DEV:any IP_NET_1 ACCEPT'
+PF_FORWARD_3='IP_NET_2 IP_NET_1 REJECT'
+PF_FORWARD_4='if:IP_NET_2_DEV:any IP_NET_2 ACCEPT'
     \end{lstlisting}
-%    \begin{figure}
-%        \input{img/dmz.tikz}
-%    \end{figure}
-    \todo{Grafik aus dem fli4l-Wiki}
-    \todo{Auch Config-Beispiele aus dem Wiki}
 \end{frame}
 
 \begin{frame}[fragile,label=extarray]{Erweiterte Array-Syntax}
