@@ -80,6 +80,8 @@
         ]{#1};%
 }
 
+\newcommand{\dashdash}[1]{-\hspace{0pt}-#1}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% preparations for beamer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -609,7 +611,7 @@ NET_PREFIX[] {
                 \item einige fli4l-spezifische Patches
                 \item zwei Kernelvarianten: LTS und recent stable, aktuell noch v4.19 und v5.3
                 \item dadurch zeitnahe Integration von (Security)-Updates
-                \item \texttt{fbr-make -\hspace{0pt}-help}
+                \item \texttt{fbr-make \dashdash{help}}
             \end{itemize}
         \end{column}
         \begin{column}{0.35\textwidth}
