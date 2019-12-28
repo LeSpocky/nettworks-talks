@@ -117,6 +117,7 @@
 \pgfdeclareimage[width=0.5\textwidth]{config-folder}{img/Screenshot_20191208_220336.png}
 \pgfdeclareimage[width=0.5\textwidth]{win-build-build}{img/win_build_build.png}
 \pgfdeclareimage[height=0.75\paperheight]{dmz}{img/dmz.png}
+\pgfdeclareimage[width=0.3\textwidth]{buildroot-logo}{img/buildroot-logo.png}
 
 \titlegraphic{%
 %    \input{../img/fli4l-cubeonly-scale_0.15.tikz}
@@ -594,6 +595,30 @@ NET_PREFIX[] {
 \end{frame}
 
 \subsection{Entwicklung}
+
+\begin{frame}
+    \frametitle{Fli4l Buildroot (FBR)}
+    \framesubtitle{Shoulders, Wheels, Collaboration, …}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.65\textwidth}
+            \begin{itemize}
+                \item Binaries gebaut mit selbst erweitertem \href{https://buildroot.org/}{Buildroot}
+                \item Nutzung der LTS-Releases: aktuell v2018.02.x
+                \item einige fli4l-spezifische Packages
+                \item z.\,T. upstreaming von Packages
+                \item einige fli4l-spezifische Patches
+                \item zwei Kernelvarianten: LTS und recent stable, aktuell noch v4.19 und v5.3
+                \item dadurch zeitnahe Integration von (Security)-Updates
+                \item \texttt{fbr-make -\hspace{0pt}-help}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.35\textwidth}
+            \begin{figure}
+                \pgfuseimage{buildroot-logo}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
 
 \begin{frame}{Kommunikation}
     \begin{description}[Newsgroups]
