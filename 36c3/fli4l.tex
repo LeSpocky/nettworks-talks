@@ -28,7 +28,8 @@
     \renewcommand{\ULthickness}{.4pt}% Resetting to ulem default
 }
 
-% colors for listings
+%% colors
+% for listings
 \definecolor{lightergray}{gray}{.95}
 \definecolor{darkblue}{rgb}{0,0,0.5}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
@@ -36,6 +37,11 @@
 \definecolor{darkerblue}{rgb}{0,0,0.4}
 \definecolor{darkergreen}{rgb}{0,0.4,0}
 \definecolor{darkerred}{rgb}{0.4,0,0}
+
+% 36c3
+\definecolor{36c3green}{RGB}{0,187,49}
+\definecolor{36c3grey}{RGB}{208,208,206}
+\definecolor{36c3orange}{RGB}{254,80,0}
 
 \usepackage[]{listings}
 \lstloadlanguages{bash,sh}
@@ -69,15 +75,15 @@
 \newcommand{\CXX}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
 \def\CPP{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 
-\newcommand*{\greenemph}[1]{%
+\newcommand*{\coloremph}[2]{%
     \tikz[baseline]
         \node[%
             rectangle,
-            fill=green!80,
+            fill=#1!80,
             rounded corners=0.8mm,
             inner sep=0.8mm,
             anchor=base
-        ]{#1};%
+        ]{#2};%
 }
 
 \newcommand{\dashdash}[1]{-\hspace{0pt}-#1}
@@ -184,7 +190,7 @@
         \begin{column}{0.3\textwidth}
             \begin{block}{Projekte}
                 \begin{itemize}
-                    \item \href{https://www.fli4l.de/}{fli4l}
+                    \item \coloremph{36c3green}{\href{https://www.fli4l.de/}{fli4l}}
                     \item \href{https://buildroot.org/}{buildroot}
                     \item \href{https://ptxdist.org/}{ptxdist}
                     \item \href{https://github.com/rafaelsteil/libcgi}{libcgi}
@@ -199,7 +205,9 @@
 
 \section{Router}
 
-\begin{frame}{Router}
+\begin{frame}
+    \frametitle{Router}
+    \framesubtitle{Backbone-Router, Border-Router, Edge-Router, …}
     \begin{figure}
         \pgfuseimage{cisco7600}
     \end{figure}
@@ -268,7 +276,7 @@
 
 \begin{frame}
     \frametitle{Router}
-    \framesubtitle{Was tut ein Router eigentlich?}
+    \framesubtitle{Was tut unser Router eigentlich?}
     \begin{columns}[T,onlytextwidth]
         \begin{column}{0.65\textwidth}
             \begin{itemize}
@@ -347,8 +355,9 @@ stellen.}
                 \begin{itemize}
                     \item \href{https://openwrt.org/}{OpenWrt} (GNU/Linux)
                     \item \href{https://opnsense.org/}{OPNsense®} (BSD)
-                    \item \href{https://www.ipfire.org/}{IPFire} (GNU/Linux)
-                    \item \strong{\href{https://www.fli4l.de/}{fli4l}} (GNU/Linux)
+                    \item \coloremph{white}{\href{https://www.ipfire.org/}{IPFire} (GNU/Linux)}
+                    \only<1>{\item \coloremph{white}{\href{https://www.fli4l.de/}{fli4l} (GNU/Linux)}}
+                    \only<2>{\item \coloremph{36c3green}{\href{https://www.fli4l.de/}{fli4l} (GNU/Linux)}}
                 \end{itemize}
             \end{exampleblock}
         \end{column}
@@ -401,14 +410,14 @@ stellen.}
     \blockquote{\scriptsize%
 \strong{Forum:} de.alt.comm.isdn4linux\\
 \strong{Subject:} 1-Disketten-i4l-Router\\
-\strong{Date:} \greenemph{04/05/2000}\\
+\strong{Date:} \coloremph{36c3green}{04/05/2000}\\
 \strong{Author:} Frank Meyer
 \tiny
 
 Liebe Liste,
 
-ich habe mir zu Hause aus einem alten \greenemph{486er} und einer einzelnen
-\greenemph{Diskette(!)} einen i4l-Router zusammengebaut.
+ich habe mir zu Hause aus einem alten \coloremph{36c3green}{486er} und einer einzelnen
+\coloremph{36c3green}{Diskette(!)} einen i4l-Router zusammengebaut.
 
 Features:\\
 - Linux 2.0.35\\
@@ -419,9 +428,9 @@ Features:\\
 
 Hardwareausstattung\\
 - AMD 486 DX4-100\\
-- \greenemph{16MB Speicher}\\
-- \greenemph{10 Mbit Netzwerkkarte} (NE2000-Clone)\\
-- Teles 16.3 \greenemph{ISDN-Karte}\\
+- \coloremph{36c3green}{16MB Speicher}\\
+- \coloremph{36c3green}{10 Mbit Netzwerkkarte} (NE2000-Clone)\\
+- Teles 16.3 \coloremph{36c3green}{ISDN-Karte}\\
 - Keine Laufwerke ausser Diskettenlaufwerk\\
 - 1 Boot-Diskette, alles notwendige drauf\\
 
@@ -433,7 +442,7 @@ Bei mir zu Hause läuft das Ganze mit dem Internet-By-Call-Provider LN,
 sollte aber auch mit jedem anderen funktionieren, der PPP verwendet.
 Andere findet man z.B. auf www.heise.de.
 
-Der \greenemph{Kernel 2.0.35} ist zwar nicht mehr ganz aktuell. Ich habe aber
+Der \coloremph{36c3green}{Kernel 2.0.35} ist zwar nicht mehr ganz aktuell. Ich habe aber
 keine andere Möglichkeit gefunden, das alles auf eine Diskette zu quetschen.
 
 Sollten einige (mehr als 1 :-) an dem 1-Disketten-i4l-Router

@@ -1,15 +1,13 @@
-\definecolor{cfe5000}{RGB}{254,80,0}
-
 \begin{tikzpicture}[%
-  y=0.80pt, x=0.80pt, 
-  yscale=-0.500000, xscale=0.500000, 
+  y=0.80pt, x=0.80pt,
+  yscale=-0.500000, xscale=0.500000,
   inner sep=0pt, outer sep=0pt,
 ]
 
   \path[%
-    fill=cfe5000, line join=miter, line cap=butt, miter limit=10.00, 
+    fill=36c3orange, line join=miter, line cap=butt, miter limit=10.00,
     nonzero rule, line width=0.400pt,
-  ] 
+  ]
     (660.4827,575.5160) -- (659.2089,611.9937) --
     (640.5948,574.8215) -- (623.5052,574.2247) -- (620.9087,648.5794) --
     (638.6979,649.2006) -- (639.9752,612.6229) -- (658.6857,649.8986) --
