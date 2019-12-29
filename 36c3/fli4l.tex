@@ -203,6 +203,12 @@
     \begin{figure}
         \pgfuseimage{cisco7600}
     \end{figure}
+    \pause
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=center] at (current page.center) {%
+            \input{img/not_today.tikz}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}
@@ -223,6 +229,38 @@
             \pgfuseimage{wrt54g}
         \end{column}
         \begin{column}{0.15\textwidth}
+            ~
+        \end{column}
+    \end{columns}
+    \pause
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=center] at (current page.center) {%
+            \input{img/not_today.tikz}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Router}
+    \framesubtitle{Now we're talking …}
+    \begin{columns}[T]
+        \begin{column}{0.1\textwidth}
+            ~
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \pgfuseimage{gallery-rack}
+            \vspace{1.2mm}
+            \pgfuseimage{gallery-tobi}
+        \end{column}
+%        \begin{column}{1.2mm}
+%            ~
+%        \end{column}
+        \begin{column}{0.4\textwidth}
+            \pgfuseimage{gallery-mikro}
+            \vspace{1.2mm}
+            \pgfuseimage{gallery-wrap}
+        \end{column}
+        \begin{column}{0.1\textwidth}
             ~
         \end{column}
     \end{columns}
@@ -297,30 +335,6 @@ stellen.}
         \pgfuseimage{gallery-sternquell}
         \caption{aus der \href{http://extern.fli4l.de/fli4l_praxis_gallery/main.php}{fli4l Praxis-Galerie}}
     \end{figure}
-\end{frame}
-
-\begin{frame}{Galerie}
-    \begin{columns}[T]
-        \begin{column}{0.1\textwidth}
-            ~
-        \end{column}
-        \begin{column}{0.4\textwidth}
-            \pgfuseimage{gallery-rack}
-            \vspace{1.2mm}
-            \pgfuseimage{gallery-tobi}
-        \end{column}
-%        \begin{column}{1.2mm}
-%            ~
-%        \end{column}
-        \begin{column}{0.4\textwidth}
-            \pgfuseimage{gallery-mikro}
-            \vspace{1.2mm}
-            \pgfuseimage{gallery-wrap}
-        \end{column}
-        \begin{column}{0.1\textwidth}
-            ~
-        \end{column}
-    \end{columns}
 \end{frame}
 
 \begin{frame}{Router-Software}
