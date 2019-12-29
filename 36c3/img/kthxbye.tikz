@@ -1,9 +1,5 @@
-
-\definecolor{cd0d0ce}{RGB}{208,208,206}
-
-
 \begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-0.150000, xscale=0.150000, inner sep=0pt, outer sep=0pt]
-\begin{scope}[fill=cd0d0ce,line join=miter,line cap=butt,miter limit=10.00,nonzero rule,line width=0.120pt]
+\begin{scope}[fill=36c3grey,line join=miter,line cap=butt,miter limit=10.00,nonzero rule,line width=0.120pt]
   \path[fill] (-276.7406,470.7258) -- (-261.6853,474.9052) -- (-257.3321,483.8219)
     -- (-247.6406,495.6749) -- (-236.9952,502.8937) -- (-228.7678,512.4929) --
     (-223.6145,520.4224) -- (-226.3472,531.6498) -- (-216.1988,542.0066) --
@@ -161,3 +157,4 @@
 
 \end{tikzpicture}
 
+% vim: set et sts=0 ts=2 sw=2 sr ft=tex:
