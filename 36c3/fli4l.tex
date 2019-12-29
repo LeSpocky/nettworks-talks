@@ -121,6 +121,15 @@
 \pgfdeclareimage[height=0.75\paperheight]{dmz}{img/dmz.png}
 \pgfdeclareimage[width=0.3\textwidth]{buildroot-logo}{img/buildroot-logo.png}
 
+% gallery
+\pgfdeclareimage[height=0.6\paperheight]{gallery-sternquell}{img/gallery/bild7.jpg}
+
+\pgfdeclareimage[height=0.35\paperheight]{gallery-rack}{img/gallery/DSC01859.JPG}
+%\pgfdeclareimage[height=0.35\paperheight]{gallery-tobi}{img/gallery/gesamtansicht.JPG}
+\pgfdeclareimage[height=0.35\paperheight]{gallery-tobi}{img/gallery/router.JPG}
+\pgfdeclareimage[height=0.35\paperheight]{gallery-mikro}{img/gallery/img_0150A.jpg}
+\pgfdeclareimage[height=0.35\paperheight]{gallery-wrap}{img/gallery/wrap1_fr.jpg}
+
 \titlegraphic{%
 %    \input{../img/fli4l-cubeonly-scale_0.15.tikz}
     \input{img/fli4l_bleeptrack_2.tikz}
@@ -284,11 +293,34 @@ stellen.}
 \begin{frame}
     \frametitle{Routerfreiheit}
     \framesubtitle{Hold my Beer …}
-    \begin{itemize}
-        \item \href{http://extern.fli4l.de/fli4l_praxis_gallery/main.php}{fli4l Praxis-Galerie}
-    \end{itemize}
+    \begin{figure}
+        \pgfuseimage{gallery-sternquell}
+        \caption{aus der \href{http://extern.fli4l.de/fli4l_praxis_gallery/main.php}{fli4l Praxis-Galerie}}
+    \end{figure}
+\end{frame}
 
-    \todo{Bilder aus der Galerie in die Folien}
+\begin{frame}{Galerie}
+    \begin{columns}[T]
+        \begin{column}{0.1\textwidth}
+            ~
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \pgfuseimage{gallery-rack}
+            \vspace{1.2mm}
+            \pgfuseimage{gallery-tobi}
+        \end{column}
+%        \begin{column}{1.2mm}
+%            ~
+%        \end{column}
+        \begin{column}{0.4\textwidth}
+            \pgfuseimage{gallery-mikro}
+            \vspace{1.2mm}
+            \pgfuseimage{gallery-wrap}
+        \end{column}
+        \begin{column}{0.1\textwidth}
+            ~
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Router-Software}
