@@ -636,15 +636,15 @@ COMP_TYPE_OPT='xz'       # compression algorithm if compression is
         language=sh
     ]
 VLAN_DEV_1_DEV='eth2'
-VLAN_DEV_1_VID='128'
+VLAN_DEV_1_VID='4'
 BRIDGE_DEV_1_DEVNAME='br0'
 BRIDGE_DEV_1_DEV_1_DEV='eth1'
-BRIDGE_DEV_1_DEV_2_DEV='eth2.128'
+BRIDGE_DEV_1_DEV_2_DEV='eth2.4'
 
 IP_NET_1='192.168.6.1/24'   # internes Netz (LAN)
 IP_NET_1_DEV='br0'          # (gruen)
 IP_NET_2='192.168.7.1/24'   # DMZ Netz
-IP_NET_2_DEV='eth1.9'       # (orange)
+IP_NET_2_DEV='eth2.9'       # (orange)
 
 PF_FORWARD_1='tmpl:samba DROP'
 PF_FORWARD_2='if:IP_NET_1_DEV:any IP_NET_1 ACCEPT'
