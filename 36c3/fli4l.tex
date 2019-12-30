@@ -589,7 +589,24 @@ COMP_TYPE_OPT='xz'       # compression algorithm if compression is
 \subsection{Möglichkeiten und Einsatzszenarien}
 
 \begin{frame}{Circuits}
-    \todo{Doku und Wiki nach verständlichen Illustrationen abgrasen}
+    \begin{block}{Konzept}
+        \begin{itemize}
+            \item Begriff aus der Zeit von ISDN-Verbindungen
+            \item Verbindung zwischen dem Router und einem \emph{anderen} Netzwerk
+            \item zur Konfiguration von Routen
+            \item Klassen, Abhängigkeiten, Bundles (Multilink-PPP, …)
+            \item \texttt{circd} und \texttt{fli4lctrl}
+            \item dynamische Nutzung in Konfiguration (bspw. Netze und Paketfilter)
+        \end{itemize}
+    \end{block}
+    \begin{block}{Typen}
+        \begin{itemize}
+            \item DHCP / DHCPv6 / RA
+            \item ISDN
+            \item PPP (xDSL)
+            \item …
+        \end{itemize}
+    \end{block}
 \end{frame}
 
 \begin{frame}{Mehrere Subnetze}
