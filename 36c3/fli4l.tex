@@ -671,7 +671,39 @@ NET_PREFIX[] {
 
 \subsection{Entwicklung}
 
-\begin{frame}
+\begin{frame}[fragile]{Verwendete Technologien}
+    \begin{itemize}
+        \item Subversion + JIRA + Jenkins
+        \item Linux
+        \item buildroot (FBR)
+        \item busybox
+        \item POSIX shell scripts (almost) everywhere
+        \pause
+        \item Beispiel aus dem CGI-Code
+            (\href{https://web.nettworks.org/bugs/browse/FFL-2180}{FFL-2180}):
+    \end{itemize}
+    \begin{lstlisting}[%
+        basicstyle=\ttfamily\scriptsize\mdseries,
+        language=sh
+    ]
+http_header () {
+    # need quoted string expansion,
+    # \r is not interpreted as is in heredoc
+    local CR=$'\r'
+
+    case "$1" in
+        ""|html)
+            cat <<-EOF
+Content-Type: text/html; charset=utf-8$CR
+Cache-Control: max-age=1, s-maxage=1, no-cache, must-revalidate, no-store$CR
+Pragma: no-cache$CR
+Expires: $(date -Ru)$CR
+EOF
+            ;;
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[label=fbr]
     \frametitle{Fli4l Buildroot (FBR)}
     \framesubtitle{Don't reinvent the wheel on the should of giants …}
     \begin{columns}[T,onlytextwidth]
